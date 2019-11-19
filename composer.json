@@ -1,0 +1,6 @@
+{
+    "require": {
+        "justinrainbow/json-schema": "^5.2",
+        "galbar/jsonpath": "dev-master"   
+    }
+}
