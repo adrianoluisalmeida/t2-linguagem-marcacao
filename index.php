@@ -27,43 +27,49 @@
                             <?php echo $arrayFilmes[$filme_id]['name'] ?>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            Nome em inglês: 
-                        </td>
-                        <td>
-                            <?php echo $arrayFilmes[$filme_id]['name_english'] ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Distribuição
-                        </td>
-                        <td>
-                            <?php echo $arrayFilmes[$filme_id]['distribution'] ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Sinopse
-                        </td>
-                        <td>
-                            <?php echo $arrayFilmes[$filme_id]['sinopse'] ?>
-                        </td>
-                    </tr>
-                    
-                    
-                    <tr>
-                        <td>
-                            Elenco de Suporte
-                        </td>
-                        <td>
-                            <?php foreach($arrayFilmes[$filme_id]['cast_support'] as $support): ?>
-                                <?php echo $support . "<br/>" ?>
-                            <?php endforeach ?>
-                        </td>
-                    </tr>
-                    <?php if(array_key_exists('year', $arrayFilmes)): ?>
+                    <?php if(array_key_exists('name_english', $arrayFilmes[$filme_id])): ?>
+                        <tr>
+                            <td>
+                                Nome em inglês: 
+                            </td>
+                            <td>
+                                <?php echo $arrayFilmes[$filme_id]['name_english'] ?>
+                            </td>
+                        </tr>
+                    <?php endif; ?>
+                    <?php if(array_key_exists('distribution', $arrayFilmes[$filme_id])): ?>
+                        <tr>
+                            <td>
+                                Distribuição
+                            </td>
+                            <td>
+                                <?php echo $arrayFilmes[$filme_id]['distribution'] ?>
+                            </td>
+                        </tr>
+                    <?php endif; ?>
+                    <?php if(array_key_exists('sinopse', $arrayFilmes[$filme_id])): ?>
+                        <tr>
+                            <td>
+                                Sinopse
+                            </td>
+                            <td>
+                                <?php echo $arrayFilmes[$filme_id]['sinopse'] ?>
+                            </td>
+                        </tr>
+                    <?php endif ?>
+                    <?php if(array_key_exists('cast_support', $arrayFilmes[$filme_id])): ?>
+                        <tr>
+                            <td>
+                                Elenco de Suporte
+                            </td>
+                            <td>
+                                <?php foreach($arrayFilmes[$filme_id]['cast_support'] as $support): ?>
+                                    <?php echo $support . "<br/>" ?>
+                                <?php endforeach ?>
+                            </td>
+                        </tr>
+                    <?php endif ?>
+                    <?php if(array_key_exists('year', $arrayFilmes[$filme_id])): ?>
                         <tr>
                             <td>
                                 Ano
@@ -73,7 +79,7 @@
                             </td>
                         </tr>
                     <?php endif; ?>
-                    <?php if(array_key_exists('direction', $arrayFilmes)): ?>
+                    <?php if(array_key_exists('direction', $arrayFilmes[$filme_id])): ?>
                         <tr>
                             <td>
                                 Direção
@@ -84,7 +90,7 @@
                         </tr>
                     <?php endif; ?>
 
-                    <?php if(array_key_exists('genre', $arrayFilmes)): ?>
+                    <?php if(array_key_exists('genre', $arrayFilmes[$filme_id])): ?>
                         <tr>
                             <td>Gênero</td>
                             <td><?php echo $arrayFilmes[$filme_id]['genre'] ?></td>
