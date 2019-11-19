@@ -1,10 +1,13 @@
 <?php
+header("Content-type: text/html; charset=utf-8");
 
 require("./vendor/autoload.php");
 
 use JsonPath\JsonObject;
 use JsonPath\InvalidJsonException;
 use JsonPath\InvalidJsonPathException;
+
+
 
 $json = file_get_contents('movies.json');
 
@@ -36,6 +39,6 @@ try {
 if ($r === false) {
     print "Nada encontrado";
 } else {
-    print json_encode($r);
+    print json_encode($r, JSON_UNESCAPED_UNICODE);
 }
 print "\r\n";

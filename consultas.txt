@@ -1,0 +1,27 @@
+Q.1)
+
+php consulta.php "$.topic[?(@.instanceOf.topicRef.* == '#Genero')].baseName.baseNameString"
+
+Q.2) 
+
+Parte 1 - Retorna todos os filmes do ano de 2000
+php consulta.php "$.association[?(@.member[1].topicRef.* == '#id_2000')].member[0].topicRef.*"
+
+Parte 2 - Retorna o nome de um filme estepecifico
+
+
+Q.3)
+
+Parte 1 - Retorna Sinopse que contém a palavra especial no texto
+
+php consulta.php "$.topic[?(@.occurrence.scope.topicRef.* == "#sinopse")].occurrence[?(@.resourceData =~ '/especial/')].resourceData
+
+
+Q.4)
+
+Parte 1 - Retorna os ids dos filmes que são do tipo "thriller"
+
+php consulta.php "$.association[?(@.member[1].topicRef.* == '#thriller')].member[0].topicRef.*"
+["#na-teia-da-aranha","#revelacao","#stigmata","#infidelidade"]
+
+
