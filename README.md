@@ -6,7 +6,7 @@ Trabalho desenvolvido em PHP e JSON
 
 1 - A conversão do arquivo GioMovies.xtm para JSON foi realizada através de uma aplicação grátis online (https://www.freeformatter.com/xml-to-json-converter.html).
 
-2 - A validação do arquivo JSON está no arquivo movies-schema.php. Esse código utiliza de uma biblioteca de terceiros para executar a validação das estruturas JSON em relação ao schema. Biblioteca: [justinrainbow/json-schema]([https://github.com/justinrainbow/json-schema).
+2 - A validação do arquivo JSON está no arquivo movies-schema.php. Esse código utiliza de uma biblioteca de terceiros para executar a validação das estruturas JSON em relação ao schema. Biblioteca: [justinrainbow/json-schema](https://github.com/justinrainbow/json-schema).
 
 Caso o arquivo esteja formato de acordo com a validação, apenas uma mensagem simples será retornada: "O documento informado é válido.". Por outro lado, se acontecer do arquivo estiver mal formatado, o resultado será semelhante ao seguinte:
 
@@ -31,7 +31,7 @@ Depois de rodar o servidor embutido, basta acessar o seguinte endereço: localho
 
 3 - Para realizar as consultas no JSON, foi implementado uma biblioteca de teceiros com o objetivo de aproximar ao máximo das consultas realizadas no xml usando XPATH. Para tal, a biblioteca [galbar/jsonpath](https://github.com/Galbar/JsonPath-PHP) foi utilizada.
 
-Essa biblioteca possui uma codificação muito próxima ao xpath, inclusive na sua decoumentação podemos as poucas diferenças entre ambas [Documentação do jsonPath](https://goessner.net/articles/JsonPath/).
+Essa biblioteca possui uma codificação muito próxima ao xpath, inclusive na sua documentação podemos as poucas diferenças entre ambas [Documentação do jsonPath](https://goessner.net/articles/JsonPath/).
 
 Para executar as consultas presentes no arquivo [consultas.txt](./consultas.txt) é necessário executar o arquivo consulta.php seguido pela query que será realizada. 
 Exemplo:
