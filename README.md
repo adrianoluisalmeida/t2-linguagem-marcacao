@@ -2,6 +2,21 @@
 
 **Aluno:** Adriano Luís de Almeida
 
+
+Necessário para executar o projeto:
+* De preferência SO linux, que foi o utilizado no desenvolvimento;
+* PHP 7.* instalado;
+* Composer para instalar as bibliotecas;
+
+Com o composer instalado:
+
+```
+composer install
+php -S localhost:8000
+```
+
+Segue abaixo a explicação detalhada de cada uma das atividades:
+
 Trabalho desenvolvido em PHP e JSON
 
 1 - A conversão do arquivo GioMovies.xtm para JSON foi realizada através de uma aplicação grátis online (https://www.freeformatter.com/xml-to-json-converter.html).
