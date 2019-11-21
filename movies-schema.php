@@ -184,7 +184,7 @@ $validator->validate(
     Constraint::CHECK_MODE_VALIDATE_SCHEMA
 ); // validates!
 
-var_dump('<pre>', $validations, '</pre>');
+
 
 if ($validator->isValid()) {
     echo "O documento informado é válido.";
