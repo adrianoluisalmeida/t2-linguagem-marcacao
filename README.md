@@ -5,7 +5,7 @@
 
 Necessário para executar o projeto:
 * De preferência SO linux, que foi o utilizado no desenvolvimento;
-* PHP 7.* instalado;
+* PHP 7.* instalado;    
 * Composer para instalar as bibliotecas;
 
 Com o composer instalado:
