@@ -48,11 +48,15 @@ Depois de rodar o servidor embutido, basta acessar o seguinte endereço: localho
 
 Essa biblioteca possui uma codificação muito próxima ao xpath, inclusive na sua documentação podemos as poucas diferenças entre ambas [Documentação do jsonPath](https://goessner.net/articles/JsonPath/).
 
-Para executar as consultas presentes no arquivo [consultas.txt](./consultas.txt) é necessário executar o arquivo consulta.php seguido pela query que será realizada. 
+Para executar as consultas basata executar o arquivo referente a cada consulta.
 Exemplo:
-
 ```php
-php consulta.php "$.topic[?(@.instanceOf.topicRef.* == '#Genero')].baseName.baseNameString"
+php consulta.php //para executar a consulta 1
+php consulta2.php //para executar a consulta 2
+php consulta3.php //para executar a consulta 3
+php consulta4.php //para executar a consulta 4
+php consulta5.php //para executar a consulta 5
+php consulta6.php //para executar a consulta 6
 ```
 
 4 - As transformações do arquivo para gerar a página html com listagem de filmes, está no arquivo index.php e index-movies.php.  Para visualizar basta executar o servidor embutido e abrir o endereço principal no navegador.

@@ -7,21 +7,10 @@ use JsonPath\JsonObject;
 use JsonPath\InvalidJsonException;
 use JsonPath\InvalidJsonPathException;
 
-
-
 $json = file_get_contents('movies.json');
 
-switch (count($argv)) {
-    case 1:
-        print "Usage: $argv[0] <jsonpath> [<file to json>]\n";
-        die();
-        break;
-    case 3:
-        $json = file_get_contents($argv[2]);
-    default:
-        $jsonPath = $argv[1];
-}
-
+$jsonPath = "$.topic[?(@.instanceOf.topicRef.* == '#Genero')].baseName.baseNameString";
+//
 try {
     $jsonObject = new JsonObject($json);
 } catch (InvalidJsonException $e) {
@@ -41,4 +30,3 @@ if ($r === false) {
 } else {
     print json_encode($r, JSON_UNESCAPED_UNICODE);
 }
-print "\r\n";
